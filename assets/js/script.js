@@ -33,16 +33,16 @@ let magnesiumSwiper = new Swiper(".magnesium-slider", {
 
 
 let bestsellersSwiper = new Swiper(".bestsellers-slider", {
-    slidesPerView: 4,
+    slidesPerView: 5,
     speed: 500,
     spaceBetween: 24,
     breakpoints: {
-        '1300': {
-            slidesPerView: 4,
+        '1599': {
+            slidesPerView: 5,
             spaceBetween: 16,
         },
-        '1020': {
-            slidesPerView: 3,
+        '1300': {
+            slidesPerView: 4,
             spaceBetween: 16,
             slidesPerGroup: 1,
         },
@@ -63,17 +63,17 @@ let bestsellersSwiper = new Swiper(".bestsellers-slider", {
 
 
 let nutritionSwiper = new Swiper(".nutrition-slider", {
-    slidesPerView: 4,
+    slidesPerView: 5,
     speed: 500,
     loop: true,
     spaceBetween: 20,
     breakpoints: {
+        '1599': {
+            slidesPerView: 5,
+            spaceBetween: 16,
+        },
         '1300': {
             slidesPerView: 4,
-            spaceBetween: 20,
-        },
-        '1020': {
-            slidesPerView: 3,
             spaceBetween: 16,
             slidesPerGroup: 1,
         },
@@ -94,17 +94,17 @@ let nutritionSwiper = new Swiper(".nutrition-slider", {
 
 
 let magazineSwiper = new Swiper(".magazine-slider", {
-    slidesPerView: 4,
+    slidesPerView: 5,
     speed: 500,
     loop: true,
     spaceBetween: 20,
     breakpoints: {
+        '1599': {
+            slidesPerView: 5,
+            spaceBetween: 16,
+        },
         '1300': {
             slidesPerView: 4,
-            spaceBetween: 20,
-        },
-        '1020': {
-            slidesPerView: 3,
             spaceBetween: 16,
             slidesPerGroup: 1,
         },

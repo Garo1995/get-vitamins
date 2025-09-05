@@ -405,17 +405,19 @@ p{
 
 .from-others-main{
     background: #F5F2EC;
-
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 100%;
 }
 .from-others-photo{
-    max-width: 720px;
+    max-width: 880px;
     width: 100%;
 }
 .from-others-photo img{
     width: 100%;
 }
 .from-others-info{
-    max-width: 720px;
+    max-width: 820px;
     width: 100%;
     padding: 90px 60px 40px;
 }
@@ -479,13 +481,15 @@ p{
 }
 .producing-dietary{
     background: #FFFFFF;
-
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
 }
 .producing-flex{
     background: #FFFFFF;
 }
 .producing-info{
-    max-width: 720px;
+    max-width: 820px;
     width: 100%;
     padding: 190px 130px 140px 90px;
 }
@@ -500,7 +504,14 @@ p{
     max-width: 182px;
     width: 100%;
 }
+.producing-photo{
+    max-width: 880px;
+    width: 100%;
 
+}
+.producing-photo img{
+    width: 100%;
+}
 
 .supplement-main{
     background: #000000;
@@ -610,9 +621,6 @@ p{
 
 }
 
-.nutrition-slider{
-    width: 1600px;
-}
 
 
 
@@ -792,4 +800,25 @@ p{
     max-width: 173px;
     width: 100%;
     margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1599px){
+    .nutrition-slider{
+        width: 1600px;
+    }
+
+    .producing-info {
+        max-width: 720px;
+    }
 }
