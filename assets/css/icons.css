@@ -1,0 +1,31 @@
+
+.icon {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    font-size: 18px;
+    background-color: #333333;
+    transition: 0.3s;
+}
+
+
+.icon.icon-arrow-left {
+    mask-image: url('../img/icon/arrow-left.svg');
+    -webkit-mask-image: url('../img/icon/arrow-left.svg');
+}
+
+.icon.icon-arrow-right {
+    mask-image: url('../img/icon/arrow-right.svg');
+    -webkit-mask-image: url('../img/icon/arrow-right.svg');
+}
+
+.icon.icon-arrow-bottom {
+    mask-image: url('../img/icon/arrow-bottom.svg');
+    -webkit-mask-image: url('../img/icon/arrow-bottom.svg');
+}
