@@ -207,7 +207,7 @@ $(function () {
             $this.removeClass('open')
         }
     }
-    let accordion = new Accordion($('#accordion'), false);
+    let accordion = new Accordion($('.accordion'), false);
 });
 
 
@@ -294,4 +294,33 @@ let positiveswiper = new Swiper(".positive-slider", {
         },
     },
 });
+
+
+
+
+
+
+let productBigSwiper = new Swiper(".product-sm-slider", {
+    spaceBetween: 8,
+    slidesPerView: 7,
+    freeMode: true,
+    watchSlidesProgress: true,
+
+});
+let productSwiper = new Swiper(".product-big-slider", {
+    spaceBetween: 8,
+    navigation: {
+        nextEl: ".product-button-next",
+        prevEl: ".product-button-prev",
+    },
+    thumbs: {
+        swiper: productBigSwiper,
+    },
+    pagination: {
+        el: ".product-pagination",
+        clickable: true,
+    },
+});
+
+
 
