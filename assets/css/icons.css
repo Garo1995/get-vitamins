@@ -29,3 +29,16 @@
     mask-image: url('../img/icon/arrow-bottom.svg');
     -webkit-mask-image: url('../img/icon/arrow-bottom.svg');
 }
+
+.icon.icon-plus {
+    mask-image: url('../img/icon/plus.svg');
+    -webkit-mask-image: url('../img/icon/plus.svg');
+
+    background-color: #FFFFFF;
+}
+.icon.icon-close {
+    mask-image: url('../img/icon/close.svg');
+    -webkit-mask-image: url('../img/icon/close.svg');
+
+    background-color: #FFFFFF;
+}

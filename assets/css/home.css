@@ -109,9 +109,11 @@ p{
     font-size: 14px;
     line-height: 28px;
     text-transform: uppercase;
-    letter-spacing: 5%;
+    white-space: nowrap;
 }
-
+.btn:hover{
+    background: #00a30f;
+}
 
 
 .magnesium-slider .swiper-pagination{
@@ -146,41 +148,36 @@ p{
 
 
 
+.swiper-container-free-mode > .swiper-wrapper{
+    transition-timing-function : linear;
+}
+
+
+
 .partners-logos {
     overflow: hidden;
-    width: 100%;
     padding: 20px 0;
     background: #000000;
 }
-
-.partners-cnt {
-    position: relative;
+.partners-logos:before{
+    content: "";
     width: 100%;
-    overflow: hidden;
 }
-
-.partners-track {
+.partners-logo{
     display: flex;
-    gap: 50px;
-    width: max-content;
-    animation: scroll-logos 15s linear infinite;
+    justify-content: center;
 }
 
-.partners-logo img {
-    display: block;
-    object-fit: contain;
+.partners-slider{
+    width: 1905px;
+    pointer-events: none;
+
 }
+.positive-slider{
+    width: 1903px;
+    pointer-events: none;
 
-@keyframes scroll-logos {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
 }
-
-
 
 
 
@@ -349,24 +346,15 @@ p{
     width: 100%;
 
 }
-
-
-.positive-reviews-cnt {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+.positive-slider .swiper-slide{
+    width: max-content!important;
 }
 
-.positive-reviews-track {
-    display: flex;
-    gap: 36px;
-    width: max-content;
-    animation: scroll-text 13s linear infinite;
-}
 
 .positive-reviews-name  {
     white-space: nowrap;
     gap: 8px;
+    justify-content: center;
 }
 .positive-reviews-name  p{
     white-space: nowrap;
@@ -394,14 +382,6 @@ p{
     justify-content: center;
 }
 
-@keyframes scroll-text {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
 
 .from-others-main{
     background: #F5F2EC;
@@ -410,14 +390,14 @@ p{
     width: 100%;
 }
 .from-others-photo{
-    max-width: 880px;
+    max-width: 920px;
     width: 100%;
 }
 .from-others-photo img{
     width: 100%;
 }
 .from-others-info{
-    max-width: 820px;
+    max-width: 920px;
     width: 100%;
     padding: 90px 60px 40px;
 }
@@ -489,9 +469,9 @@ p{
     background: #FFFFFF;
 }
 .producing-info{
-    max-width: 820px;
+    max-width: 920px;
     width: 100%;
-    padding: 190px 130px 140px 90px;
+    padding: 190px 130px 140px 150px;
 }
 
 .producing-info p{
@@ -505,7 +485,7 @@ p{
     width: 100%;
 }
 .producing-photo{
-    max-width: 880px;
+    max-width: 920px;
     width: 100%;
 
 }
@@ -560,6 +540,10 @@ p{
     position: relative;
     margin-top: 30px;
 }
+.nutrition-cnt .bestsellers-arrow{
+    display: none;
+}
+
 .nutrition-box{
     width: 100%;
     background: #2D2D2E;
@@ -626,6 +610,78 @@ p{
 
 
 
+.customers-main{
+    background: #F5F2EC;
+    padding: 60px 0;
+}
+.customers-title h2{
+    max-width: 902px;
+    width: 100%;
+}
+.customers-title span{
+    display: block;
+}
+.customers-cnt{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.customers-number{
+    gap: 12px;
+    display: flex;
+    align-items: center;
+}
+.customers-number strong{
+    color: #24C433;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 28px;
+}
+.customers-number p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+}
+
+
+
+.reviews-grid {
+    width: 100%;
+    margin: 30px auto 0;
+}
+
+.reviews-grid-items {
+    width: 100%;
+}
+
+.reviews-grid-item {
+    width: calc(25% - 16px);
+    margin-bottom: 12px;
+}
+
+.reviews-grid-inner img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.reviews-grid-hid {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -649,14 +705,13 @@ p{
 }
 .accordion-box{
     width: 100%;
-}
-
-
-.accordion-box{
     border-radius: 4px;
     background: #F5F2EC;
-
 }
+.accordion-hidden{
+    display: none;
+}
+
 
 .accordion-click{
     display: flex;
@@ -734,6 +789,16 @@ p{
     background-color: #24C433;
 }
 
+
+.hidden-acc-btn{
+    display: none;
+}
+
+
+
+
+
+
 .magazine-main{
     padding-bottom: 62px;
 }
@@ -756,7 +821,9 @@ p{
     margin-top: 30px;
     position: relative;
 }
-
+.magazine-cnt .bestsellers-arrow{
+    display: none;
+}
 .magazine-box{
     transition: 0.3s;
     width: 100%;
@@ -820,5 +887,424 @@ p{
 
     .producing-info {
         max-width: 720px;
+        padding: 190px 120px 140px 90px;
+    }
+    .from-others-info {
+        max-width: 720px;
+    }
+}
+@media (max-width: 1399px){
+    .magnesium-info {
+        margin-left: 0;
+    }
+    .magnesium-slider .swiper-pagination {
+        padding-left: 0;
+    }
+    h2 {
+        font-size: 44px;
+        line-height: 50px;
+    }
+    .bestsellers-info h3 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .from-others-info {
+        max-width: 650px;
+        padding: 55px 40px 40px;
+    }
+    .from-others-text {
+        margin-top: 20px;
+    }
+
+    .composition-flex {
+        padding: 40px 9px;
+    }
+    .producing-info {
+        max-width: 654px;
+        padding: 160px 80px 93px 50px;
+    }
+    .magazine-title p {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .magazine-title {
+        max-width: 694px;
+    }
+    .customers-title h2 {
+        max-width: 735px;
+
+    }
+    .customers-number strong {
+        font-size: 30px;
+    }
+
+    .composition-name strong {
+        font-size: 42px;
+        line-height: 51px;
+    }
+
+}
+@media (max-width: 1299px){
+    h1 {
+        font-size: 52px;
+        line-height: 58px;
+    }
+
+
+    .magnesium-box {
+        min-height: 560px;
+        padding-top: 130px;
+        padding-bottom: 36px;
+    }
+    .btn {
+        padding: 12px 22px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .from-others-name h4 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    h2 {
+        font-size: 40px;
+        line-height: 46px;
+    }
+    .nutrition-slider {
+        width: 1300px;
+    }
+    .composition-cnt {
+        gap: 22px;
+    }
+    .composition-name span {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .composition-logo {
+        width: 88px;
+    }
+}
+@media (max-width: 1199px){
+    h1 {
+        font-size: 44px;
+        line-height: 52px;
+    }
+    .magnesium-info {
+        max-width: 500px;
+    }
+    h2 {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .bestsellers-main {
+        margin-top: 50px;
+        padding-bottom: 35px;
+    }
+    .from-others-name h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .from-others-text {
+        margin-top: 15px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .from-others-info h2 {
+        margin-bottom: 24px;
+    }
+    .from-others-info {
+        padding: 55px 28px 40px;
+    }
+    .composition-logo {
+        width: 76px;
+    }
+    .producing-info {
+        padding: 70px 47px 64px 30px;
+    }
+    .producing-info p {
+        margin: 16px 0 20px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .supplement-box span {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .nutrition-title h2 {
+        max-width: 658px;
+    }
+    .reviews-grid-item {
+        width: calc(33.333333% - 16px);
+    }
+    .customers-title h2 {
+        max-width: 580px;
+    }
+
+    .accordion-click {
+        padding: 15px 16px 15px 20px;
+    }
+    .submenu {
+        padding: 0 15px 15px;
+    }
+    .see-more {
+        max-width: 253px;
+        height: 46px;
+        padding: 12px 22px;
+    }
+
+
+
+}
+@media (max-width: 1020px){
+    .magazine-title p {
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .accordion {
+        margin-top: 24px;
+        flex-direction: column;
+    }
+    .accordion-colum {
+        width: 100%;
+    }
+    h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .reviews-grid-item {
+        width: calc(50% - 16px);
+    }
+    .customers-number strong {
+        font-size: 26px;
+    }
+    .customers-title{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .customers-cnt {
+        flex-direction: row;
+        gap: 30px;
+        margin-top: 21px;
+    }
+    .nutrition-slider {
+        width: 1078px;
+    }
+    .nutrition-item {
+        margin-top: 20px;
+    }
+    .supplement-flex {
+        flex-wrap: wrap;
+    }
+    .supplement-box {
+        max-width: 283px;
+        width: 100%;
+    }
+    .producing-info p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .producing-flex {
+        flex-direction: column;
+    }
+
+    .producing-info {
+        padding: 80px 35px 80px 30px;
+        max-width: 100%;
+    }
+    .composition-flex {
+        padding: 26px 9px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    .composition-name strong {
+        font-size: 32px;
+        line-height: 43px;
+    }
+    .composition-logo {
+        width: 95px;
+    }
+    .from-others-cnt{
+        flex-direction: column-reverse;
+    }
+    .composition-name {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+    .from-others-info {
+        padding: 60px 28px 60px;
+        max-width: 100%;
+    }
+    h1 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .partners-slider {
+        width: 1205px;
+    }
+}
+
+@media (max-width: 767px){
+    .magnesium-box {
+        padding-top: 120px;
+        padding-bottom: 30px;
+        background-position: center;
+    }
+    .bestsellers-photo img {
+        height: 280px;
+    }
+    .composition-cnt {
+        flex-wrap: wrap;
+    }
+    .composition-logo {
+        width: 85px;
+    }
+    .bestsellers-title .bestsellers-arrow{
+        display: none;
+    }
+    .bestsellers-cnt .bestsellers-arrow{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .supplement-box {
+        max-width: 242px;
+    }
+    .nutrition-title .bestsellers-arrow{
+        display: none;
+    }
+
+    .nutrition-cnt .bestsellers-arrow{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .nutrition-main {
+        padding: 70px 0;
+    }
+    .magazine-flex .bestsellers-arrow{
+        display: none;
+    }
+    .magazine-cnt .bestsellers-arrow{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 570px){
+    .magnesium-reviews {
+        gap: 5px 9px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .from-others-info {
+        padding: 50px 16px 50px;
+        max-width: 100%;
+    }
+
+    .from-others-name h4 {
+        font-size: 14px;
+    }
+    .composition-name {
+        gap: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .composition-flex {
+        padding: 26px 0;
+    }
+    .producing-info {
+        padding: 60px 15px 60px 15px;
+    }
+    .supplement-box {
+        max-width: 100%;
+    }
+    .nutrition-main {
+        padding: 50px 0;
+    }
+    .nutrition-slider {
+        width: 660px;
+    }
+    .nutrition-box img {
+        height: 244px;
+    }
+    .nutrition-text {
+        padding: 14px 14px 16px;
+    }
+    .nutrition-name h4 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .customers-cnt {
+        gap: 16px;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .customers-main {
+        padding: 50px 0;
+    }
+    .reviews-grid-item {
+        width: calc(50% - 10px);
+    }
+    .asked-questions-main {
+        padding: 50px 0;
+    }
+    .magazine-flex {
+        padding-top: 50px;
+    }
+    .magazine-cnt {
+        margin-top: 18px;
+    }
+    h1 {
+        font-size: 34px;
+        line-height: 44px;
+    }
+    .magnesium-info .btn {
+        margin-top: 14px;
+    }
+    .magnesium-info p {
+        margin-top: 8px;
+    }
+    .bestsellers-cnt {
+        margin-top: 20px;
+    }
+
+    .composition-cnt {
+        justify-content: center;
+    }
+    .producing-info p {
+        margin: 12px 0 16px;
+    }
+
+    .supplement-flex {
+        gap: 20px;
+    }
+    .accordion-click h3 {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .composition-logo {
+        width: 90px;
+    }
+    .accordion-click {
+        padding: 15px 16px 15px 15px;
+    }
+    h2 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .producing-info p {
+        margin: 7px 0 16px;
     }
 }

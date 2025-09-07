@@ -18,6 +18,53 @@ $(document).ready(function () {
     })
 });
 
+$('.open-product-menu').on('click', function () {
+    $('.submenu-head').toggleClass('opened-submenu');
+})
+
+$('.close-submenu').on('click', function () {
+    $('.submenu-head').removeClass('opened-submenu');
+})
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var grid = document.querySelector('.reviews-grid-items');
+
+    // Инициализация Masonry
+    var msnry = new Masonry(grid, {
+        itemSelector: '.reviews-grid-item',
+        columnWidth: '.reviews-grid-item',
+        gutter: 20,
+        fitWidth: false, // чтобы тянулось на всю ширину
+    });
+
+    // ждём загрузки картинок
+    imagesLoaded(grid).on('progress', function () {
+        msnry.layout();
+    });
+
+    // кнопка "показать ещё"
+    document.querySelector('.reviews-btn-more').addEventListener('click', function () {
+        var hiddenItems = document.querySelectorAll('.reviews-grid-hid');
+
+        hiddenItems.forEach(function (item) {
+            item.classList.remove('reviews-grid-hid'); // показываем
+        });
+
+        imagesLoaded(grid, function () {
+            msnry.reloadItems();
+            msnry.layout();
+        });
+
+        this.style.display = 'none'; // спрятать кнопку, если блоков больше нет
+    });
+});
 
 
 
@@ -46,12 +93,16 @@ let bestsellersSwiper = new Swiper(".bestsellers-slider", {
             spaceBetween: 16,
             slidesPerGroup: 1,
         },
-        '570': {
+        '1020': {
             slidesPerView: 3,
             spaceBetween: 16,
         },
-        '320': {
+        '570': {
             slidesPerView: 2,
+            spaceBetween: 16,
+        },
+        '320': {
+            slidesPerView: 1,
             spaceBetween: 16,
         },
     },
@@ -108,12 +159,16 @@ let magazineSwiper = new Swiper(".magazine-slider", {
             spaceBetween: 16,
             slidesPerGroup: 1,
         },
-        '570': {
+        '1020': {
             slidesPerView: 3,
             spaceBetween: 16,
         },
-        '320': {
+        '570': {
             slidesPerView: 2,
+            spaceBetween: 16,
+        },
+        '320': {
+            slidesPerView: 1,
             spaceBetween: 16,
         },
     },
@@ -153,5 +208,90 @@ $(function () {
         }
     }
     let accordion = new Accordion($('#accordion'), false);
+});
+
+
+
+
+
+
+$('.open-hidden-accordion').on('click', function () {
+    $(this).addClass('hidden-acc-btn');
+    $('.accordion-box').removeClass('accordion-hidden');
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+let inswiper = new Swiper(".partners-slider", {
+    slidesPerView: 10,
+    loop: true,
+    spaceBetween: 0,
+    allowTouchMove: false,
+    autoplay: {
+        delay: 1,
+        disableOnInteraction: false
+    },
+    speed: 2000,
+    grabCursor: true,
+    mousewheelControl: true,
+    keyboardControl: true,
+    breakpoints: {
+        '1020': {
+            slidesPerView: 10,
+            slidesPerGroup: 1,
+            spaceBetween: 0,
+        },
+        '320': {
+            slidesPerView: 7,
+            slidesPerGroup: 1,
+            spaceBetween: 0,
+
+        },
+    },
+});
+
+
+
+
+let positiveswiper = new Swiper(".positive-slider", {
+    slidesPerView: 5,
+    loop: true,
+    spaceBetween: 30,
+    allowTouchMove: false,
+    autoplay: {
+        delay: 1,
+        disableOnInteraction: false
+    },
+    speed: 2600,
+    grabCursor: true,
+    mousewheelControl: true,
+    keyboardControl: true,
+    breakpoints: {
+        '1020': {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+            spaceBetween: 30,
+
+        },
+
+        '320': {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+            spaceBetween: 30,
+
+            speed: 2800,
+
+        },
+    },
 });
 

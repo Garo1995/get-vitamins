@@ -42,8 +42,21 @@ footer{
     line-height: 22px;
     font-family: 'Onest';
     transition: 0.3s;
+    position: relative;
 }
-
+.product-menu-foot a:after, .footer-menu a:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #FFFFFF;
+    transition: 0.3s;
+}
+.product-menu-foot a:hover:after, .footer-menu a:hover:after{
+    width: 100%;
+}
 .footer-menu ul{
     display: flex;
     flex-direction: column;
@@ -146,8 +159,11 @@ footer{
 .checkbox small a{
     color: #FFFFFF4D;
     text-decoration: underline;
+    transition: 0.3s;
 }
-
+.checkbox small a:hover{
+    color: #FFFFFF;
+}
 .policy-info{
     margin-top: 48px;
     border-top: 1px solid #F5F2EC4D;
@@ -173,4 +189,73 @@ footer{
 }
 .policy-href a:hover{
     color: #FFFFFF;
+}
+
+
+@media (max-width: 1399px){
+    .checkbox small {
+        font-size: 12px;
+    }
+    .radiobtn {
+        top: 2px;
+    }
+}
+
+@media (max-width: 1299px){
+    .checkbox small {
+        font-size: 11px;
+    }
+}
+@media (max-width: 1199px){
+    .phone-number, .email {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .footer-logo {
+        width: 230px;
+    }
+
+    .checkbox small {
+        font-size: 10px;
+    }
+}
+@media (max-width: 1020px){
+    .footer-main {
+        gap: 40px 30px;
+        flex-wrap: wrap;
+    }
+    .agree-privacy {
+        margin-top: 30px;
+    }
+
+}
+@media (max-width: 767px){
+    .footer-main {
+        gap: 35px 30px;
+    }
+    .product-menu {
+        max-width: 100%;
+    }
+    .footer-main {
+        justify-content: flex-start;
+        gap: 35px 60px;
+    }
+    .policy-href {
+        gap: 9px;
+        flex-direction: column;
+    }
+    .policy-info {
+        margin-top: 30px;
+    }
+
+
+}
+@media (max-width: 570px){
+    .product-menu-foot a, .footer-menu a {
+        line-height: 18px;
+    }
+    .footer-contact {
+        border-top: 1px solid #fff;
+        padding-top: 22px;
+    }
 }
