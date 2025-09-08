@@ -56,6 +56,12 @@
     height: 80px;
     transition: 0.3s;
     cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 16px;
+
+}
+.swiper-slide-thumb-active .product-sm-photo{
+    border: 1px solid #24C433;
 }
 
 .product-sm-photo img{
@@ -192,6 +198,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    padding: 16px 20px 20px;
 }
 .health-benefits-box{
     gap: 16px;
@@ -363,4 +370,353 @@
     line-height: 130%;
     color: #000000;
     margin-bottom: 4px;
+}
+
+.chelated-main{
+    margin-top: 93px;
+    padding-bottom: 93px;
+}
+.chelated-title{
+    gap: 30px;
+}
+.chelated-flex{
+    max-width: 600px;
+    width: 100%;
+}
+.chelated-pic{
+    max-width: 300px;
+    width: 100%;
+}
+.chelated-content{
+    margin-top: 16px;
+    border-top: 2px solid #F5F2EC;
+
+}
+.chelated-text{
+    border-bottom: 2px solid #F5F2EC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.chelated-text p{
+    color: #000000;
+    font-family: 'Unbounded';
+
+}
+.chelated-items{
+    max-width: 600px;
+    width: 100%;
+}
+.chelated-item{
+    max-width: 300px;
+    width: 100%;
+    padding: 22px 0;
+}
+.chelated-green{
+    background: #24C433;
+
+}
+
+.icon-check-white{
+    content: url("../img/icon/icon-check.svg");
+}
+.icon-exclude{
+    content: url("../img/icon/exclude.svg");
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1699px){
+    .product-page-rel {
+        max-width: 792px;
+    }
+
+}
+@media (max-width: 1599px){
+    .product-page-rel {
+        max-width: 685px;
+    }
+    .product-page-block h1 {
+        font-size: 52px;
+        line-height: 58px;
+    }
+    .your-results-cnt {
+        padding: 70px 70px 70px 91px;
+    }
+    .product-big-photo {
+        height: 685px;
+    }
+}
+@media (max-width: 1399px){
+    .product-big-photo {
+        height: 640px;
+    }
+    .product-page-rel {
+        max-width: 640px;
+    }
+    .ingredients-info {
+        padding: 70px 40px 0 50px;
+    }
+    .your-results-cnt {
+        padding: 70px 40px 50px 50px;
+    }
+    .ingredients-cnt {
+        padding: 70px 20px 50px 35px;
+    }
+    .ingredients-box {
+        gap: 20px;
+        padding: 20px 0;
+    }
+    .ingredients-box img {
+        width: 103px;
+    }
+    .chelated-items {
+        max-width: 520px;
+    }
+    .chelated-flex {
+        max-width: 520px;
+    }
+}
+@media (max-width: 1299px){
+    .product-page-rel {
+        max-width: 600px;
+    }
+    .product-big-photo {
+        height: 600px;
+    }
+    .product-page-block h1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    .items-sold-flex {
+        margin-top: 30px;
+        gap: 15px;
+    }
+    .product-page-info .accordion-click h3 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .items-sold-box span {
+        font-size: 18px;
+    }
+    .ingredients-fon img {
+        margin-top: 25px;
+        padding-left: 40px;
+    }
+    .ingredients-info {
+        padding: 60px 30px 0 30px;
+    }
+    .ingredients-name h4 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .ingredients-box img {
+        width: 94px;
+    }
+    .your-results-cnt {
+        padding: 60px 30px 40px 30px;
+    }
+    .your-results-box {
+        padding-bottom: 20px;
+    }
+    .your-results-cnt small {
+        margin-top: 18px;
+    }
+
+}
+@media (max-width: 1199px){
+    .product-page-cnt {
+        gap: 40px;
+        flex-direction: column;
+    }
+    .product-page-rel {
+        max-width: 855px;
+    }
+    .product-big-photo {
+        height: 700px;
+    }
+    .product-page-info {
+        max-width: 955px;
+        gap: 30px;
+    }
+    .ingredients-name h4 {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .ingredients-box {
+        padding: 15px 0;
+    }
+    .your-results-text h4 {
+        font-size: 14px;
+        line-height: 127%;
+    }
+    .your-results-cnt {
+        padding: 50px 20px 30px 15px;
+    }
+    .ingredients-info {
+        padding: 50px 20px 0 20px;
+    }
+    .chelated-items {
+        max-width: 450px;
+    }
+    .chelated-flex {
+        max-width: 450px;
+    }
+    .chelated-main {
+        margin-top: 59px;
+        padding-bottom: 60px;
+    }
+    .ingredients-name p {
+        margin-top: 4px;
+    }
+
+
+
+}
+@media (max-width: 1020px){
+    .ingredients-flex{
+        flex-direction: column;
+    }
+    .ingredients-fon {
+        width: 100%;
+    }
+    .ingredients-cnt{
+        width: 100%;
+    }
+    .your-results-flex{
+        flex-direction: column;
+    }
+    .your-results-cnt {
+        width: 100%;
+    }
+    .your-results-photo {
+        width: 100%;
+    }
+    .chelated-items{
+        display: none;
+    }
+    .chelated-flex{
+        display: none;
+    }
+    .chelated-text {
+        padding: 20px 0;
+    }
+}
+@media (max-width: 767px){
+    .product-big-photo {
+        height: 540px;
+    }
+    .product-page-block h1 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+    .product-page-block>p {
+        margin-top: 12px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 18px;
+    }
+    .health-benefits {
+        gap: 24px;
+        padding: 16px 12px 12px;
+    }
+    .health-benefits-box img {
+        width: 54px;
+    }
+    .ingredients-cnt {
+        padding: 40px 20px;
+    }
+
+
+}
+@media (max-width: 575px){
+    .product-big-photo {
+        height: 350px;
+    }
+
+
+    .product-big-slider .product-button-prev {
+        left: 12px;
+        width: 38px;
+        height: 38px;
+    }
+    .product-big-slider .product-button-next {
+        right: 10px;
+        width: 38px;
+        height: 38px;
+    }
+    .product-big-slider .product-button-prev:before, .product-big-slider .product-button-next:before {
+        width: 9px;
+        height: 9px;
+    }
+    .product-big-slider .product-button-next:before {
+        left: 11px;
+    }
+    .product-big-slider .product-button-prev:before {
+        left: 14px;
+    }
+
+
+    .product-page-block h1 {
+        font-size: 26px;
+        line-height: 28px;
+    }
+    .capsules-reception {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .items-sold-flex {
+        margin-top: 30px;
+        gap: 21px;
+        flex-direction: column;
+    }
+    .items-sold-line {
+        width: 100%;
+        height: 1px;
+    }
+    .health-benefits-box img {
+        width: 37px;
+    }
+    .health-benefits-name h4 {
+        font-size: 13px;
+    }
+    .health-benefits-name p {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .ingredients-box {
+        padding: 15px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ingredients-name h4{
+        text-align: center;
+    }
+    .ingredients-name p{
+        text-align: center;
+    }
+    .your-results-box:before{
+        display: none;
+    }
+    .your-results-box {
+        padding-bottom: 20px;
+        flex-direction: column;
+    }
+    .your-results-cnt small {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .chelated-text {
+        padding: 15px 0;
+    }
+
+
 }

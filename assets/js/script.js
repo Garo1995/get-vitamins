@@ -1,32 +1,49 @@
-$(document).ready(function () {
-    $('.open-menu').on('click', function () {
-        $(this).toggleClass('close-menu');
-        if ($(this).hasClass('close-menu')) {
-            $('.menu-content').addClass('transition-menu');
-            $('body').addClass('body_fix');
+document.addEventListener("DOMContentLoaded", function () {
+    const openMenu = document.querySelector(".open-menu");
+    const menuContent = document.querySelector(".menu-content");
+    const body = document.body;
+    const navLinks = document.querySelectorAll(".nav-menu a");
+
+    openMenu.addEventListener("click", function () {
+        this.classList.toggle("close-menu");
+
+        if (this.classList.contains("close-menu")) {
+            menuContent.classList.add("transition-menu");
+            body.classList.add("body_fix");
         } else {
-            $('.menu-content').addClass('menu-width');
-            $('body').removeClass('body_fix');
-            $('.menu-content').removeClass('transition-menu');
+            menuContent.classList.add("menu-width");
+            body.classList.remove("body_fix");
+            menuContent.classList.remove("transition-menu");
         }
     });
-    $('.nav-menu a').on('click', function () {
-        $('.menu-content').addClass('menu-width');
-        $('body').removeClass('body_fix');
-        $('.menu-content').removeClass('transition-menu');
-        $('.open-menu').removeClass('close-menu');
-    })
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            menuContent.classList.add("menu-width");
+            body.classList.remove("body_fix");
+            menuContent.classList.remove("transition-menu");
+            openMenu.classList.remove("close-menu");
+        });
+    });
 });
 
-$('.open-product-menu').on('click', function () {
-    $('.submenu-head').toggleClass('opened-submenu');
-})
+document.addEventListener("DOMContentLoaded", function () {
+    const openProductMenu = document.querySelector(".open-product-menu");
+    const submenuHead = document.querySelector(".submenu-head");
+    const closeSubmenu = document.querySelector(".close-submenu");
 
-$('.close-submenu').on('click', function () {
-    $('.submenu-head').removeClass('opened-submenu');
-})
+    if (openProductMenu) {
+        openProductMenu.addEventListener("click", function () {
+            submenuHead.classList.toggle("opened-submenu");
+        });
+    }
 
-
+    if (closeSubmenu) {
+        closeSubmenu.addEventListener("click", function () {
+            submenuHead.classList.remove("opened-submenu");
+        });
+    }
+});
 
 
 
@@ -34,10 +51,10 @@ $('.close-submenu').on('click', function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    var grid = document.querySelector('.reviews-grid-items');
+    let grid = document.querySelector('.reviews-grid-items');
 
     // Инициализация Masonry
-    var msnry = new Masonry(grid, {
+    let msnry = new Masonry(grid, {
         itemSelector: '.reviews-grid-item',
         columnWidth: '.reviews-grid-item',
         gutter: 20,
@@ -51,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // кнопка "показать ещё"
     document.querySelector('.reviews-btn-more').addEventListener('click', function () {
-        var hiddenItems = document.querySelectorAll('.reviews-grid-hid');
+        let hiddenItems = document.querySelectorAll('.reviews-grid-hid');
 
         hiddenItems.forEach(function (item) {
             item.classList.remove('reviews-grid-hid'); // показываем
@@ -96,6 +113,7 @@ let bestsellersSwiper = new Swiper(".bestsellers-slider", {
         '1020': {
             slidesPerView: 3,
             spaceBetween: 16,
+
         },
         '570': {
             slidesPerView: 2,
@@ -180,49 +198,65 @@ let magazineSwiper = new Swiper(".magazine-slider", {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    class Accordion {
+        constructor(el, multiple = false) {
+            this.el = el;
+            this.multiple = multiple;
 
-$(function () {
-    let Accordion = function (el, multiple) {
-        this.el = el || {};
-        this.multiple = multiple || false;
-        let links = this.el.find('.link');
-        links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
-    };
-
-    Accordion.prototype.dropdown = function (e) {
-        let $el = e.data.el;
-        $this = $(this),
-            $next = $this.next();
-        $next.slideToggle();
-        if (!e.data.multiple) {
-
-            $el.find('.submenu').not($next).slideUp();
+            this.links = this.el.querySelectorAll(".link");
+            this.links.forEach(link => {
+                link.addEventListener("click", (e) => this.dropdown(e, link));
+            });
         }
-        if (!$this.hasClass('open')) {
-            $('.link').each(function () {
-                $(this).removeClass('open')
-            })
-            $this.addClass('open')
-        } else {
-            $this.removeClass('open')
+
+        dropdown(e, link) {
+            const next = link.nextElementSibling;
+
+            // slideToggle
+            if (next.style.maxHeight) {
+                next.style.maxHeight = null;
+            } else {
+                next.style.maxHeight = next.scrollHeight + "px";
+            }
+
+            if (!this.multiple) {
+                this.el.querySelectorAll(".submenu").forEach(submenu => {
+                    if (submenu !== next) {
+                        submenu.style.maxHeight = null;
+                    }
+                });
+            }
+
+            if (!link.classList.contains("open")) {
+                this.el.querySelectorAll(".link").forEach(l => l.classList.remove("open"));
+                link.classList.add("open");
+            } else {
+                link.classList.remove("open");
+            }
         }
     }
-    let accordion = new Accordion($('.accordion'), false);
+
+    const accordion = new Accordion(document.querySelector(".accordion"), false);
 });
 
 
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const openBtns = document.querySelectorAll(".open-hidden-accordion");
 
-$('.open-hidden-accordion').on('click', function () {
-    $(this).addClass('hidden-acc-btn');
-    $('.accordion-box').removeClass('accordion-hidden');
-})
+    openBtns.forEach(btn => {
+        btn.addEventListener("click", function () {
+            this.classList.add("hidden-acc-btn");
 
-
-
-
+            // показать все скрытые блоки
+            document.querySelectorAll(".accordion-box.accordion-hidden")
+                .forEach(box => box.classList.remove("accordion-hidden"));
+        });
+    });
+});
 
 
 
@@ -233,28 +267,27 @@ $('.open-hidden-accordion').on('click', function () {
 
 
 let inswiper = new Swiper(".partners-slider", {
-    slidesPerView: 10,
+    slidesPerView: 1,
     loop: true,
-    spaceBetween: 0,
+    spaceBetween: 50,
     allowTouchMove: false,
     autoplay: {
         delay: 1,
         disableOnInteraction: false
     },
-    speed: 2000,
+    speed: 14000,
     grabCursor: true,
     mousewheelControl: true,
     keyboardControl: true,
     breakpoints: {
         '1020': {
-            slidesPerView: 10,
+            slidesPerView: 1,
             slidesPerGroup: 1,
-            spaceBetween: 0,
+            spaceBetween: 50,
         },
         '320': {
-            slidesPerView: 7,
+            slidesPerView: 1,
             slidesPerGroup: 1,
-            spaceBetween: 0,
 
         },
     },
@@ -264,35 +297,18 @@ let inswiper = new Swiper(".partners-slider", {
 
 
 let positiveswiper = new Swiper(".positive-slider", {
-    slidesPerView: 5,
+    slidesPerView: 1,
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 36,
     allowTouchMove: false,
     autoplay: {
         delay: 1,
         disableOnInteraction: false
     },
-    speed: 2600,
+    speed: 15500,
     grabCursor: true,
     mousewheelControl: true,
     keyboardControl: true,
-    breakpoints: {
-        '1020': {
-            slidesPerView: 5,
-            slidesPerGroup: 1,
-            spaceBetween: 30,
-
-        },
-
-        '320': {
-            slidesPerView: 5,
-            slidesPerGroup: 1,
-            spaceBetween: 30,
-
-            speed: 2800,
-
-        },
-    },
 });
 
 
@@ -305,7 +321,28 @@ let productBigSwiper = new Swiper(".product-sm-slider", {
     slidesPerView: 7,
     freeMode: true,
     watchSlidesProgress: true,
-
+    breakpoints: {
+        '1020': {
+            slidesPerView: 7,
+            slidesPerGroup: 1,
+            spaceBetween: 8,
+        },
+        '767': {
+            slidesPerView: 7,
+            slidesPerGroup: 1,
+            spaceBetween: 8,
+        },
+        '570': {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+            spaceBetween: 8,
+        },
+        '320': {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 8,
+        },
+    },
 });
 let productSwiper = new Swiper(".product-big-slider", {
     spaceBetween: 8,

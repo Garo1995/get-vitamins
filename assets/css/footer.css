@@ -63,36 +63,50 @@ footer{
     gap: 12px;
     margin-top: 12px;
 }
-
-
-.footer-contact{
-
+.footer-menu {
+    margin-right: 40px;
 }
+.footer-menu + .footer-menu{
+    margin-right: 60px;
+    position: relative;
+    right: 50px;
+}
+
+
 .phone-number, .email{
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
     font-family: 'Onest';
     color: #FFFFFF;
+    width: max-content;
 }
 .email{
     margin-top: 10px;
 }
 
 .agree-privacy{
-    margin-top: 60px;
+    margin-top: 55px;
 }
 
 .subscribe{
     padding: 9px 0;
     border-bottom: 1px solid #FFFFFF;
-    max-width: 315px;
+    max-width: 350px;
+    gap: 6px;
     width: 100%;
 }
-.subscribe span{
+.subscribe input{
+    background: unset;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
+    font-family: 'Onest';
+    color: #FFFFFF;
+    max-width: 170px;
+    width: 100%;
+}
+.subscribe input::placeholder{
     font-family: 'Onest';
     color: #FFFFFF;
 }
@@ -104,9 +118,12 @@ footer{
     color: #24C433;
 }
 
-
+footer .buy-wildberries{
+    max-width: 258px;
+    width: 100%;
+}
 .checkbox {
-    margin-top: 22px;
+    margin-top: 20px;
 
     display: block;
     position: relative;
@@ -152,8 +169,8 @@ footer{
 }
 .checkbox small{
     font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 12px;
+    line-height: 18px;
     color: #FFFFFF4D;
 }
 .checkbox small a{
@@ -165,7 +182,7 @@ footer{
     color: #FFFFFF;
 }
 .policy-info{
-    margin-top: 48px;
+    margin-top: 37px;
     border-top: 1px solid #F5F2EC4D;
     padding-top: 16px;
     color: #FFFFFF4D;
@@ -223,6 +240,14 @@ footer{
     .checkbox small {
         font-size: 10px;
     }
+    .footer-menu {
+        margin-right: 0;
+    }
+    .footer-menu + .footer-menu{
+        margin-right: 0;
+        position: relative;
+        right: 0;
+    }
 }
 @media (max-width: 1020px){
     .footer-main {
@@ -232,7 +257,18 @@ footer{
     .agree-privacy {
         margin-top: 30px;
     }
-
+    .footer-contact {
+        width: 100%;
+    }
+    .subscribe {
+        max-width: 100%;
+    }
+    .subscribe input {
+        max-width: 370px;
+    }
+    .checkbox small {
+        font-size: 12px;
+    }
 }
 @media (max-width: 767px){
     .footer-main {
@@ -262,5 +298,8 @@ footer{
     .footer-contact {
         border-top: 1px solid #fff;
         padding-top: 22px;
+    }
+    .checkbox small {
+        font-size: 10px;
     }
 }
