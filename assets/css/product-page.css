@@ -40,7 +40,6 @@
     width: 100%;
     background: #F5F2EC;
     border-radius: 16px;
-    height: 715px;
 }
 .product-big-photo img{
     width: 100%;
@@ -52,8 +51,8 @@
 }
 
 .product-sm-photo{
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 100%;
     transition: 0.3s;
     cursor: pointer;
     border: 1px solid transparent;
@@ -122,7 +121,10 @@
 .product-page-block{
     width: 100%;
 }
+.product-page-block .magnesium-reviews small{
+    color: #333333;
 
+}
 .product-page-block .magnesium-reviews span{
     color: #333333;
 }
@@ -164,6 +166,10 @@
 .items-sold-flex{
     margin-top: 40px;
     gap: 40px;
+}
+.items-sold-box{
+    max-width: 179px;
+    width: 100%;
 }
 .items-sold-box img{
     width: 80px;
@@ -255,7 +261,7 @@
 
 .ingredients-cnt{
     width: 50%;
-    padding: 70px 20px 70px 60px;
+    padding: 70px 20px 30px 60px;
 }
 
 .ingredients-box{
@@ -373,7 +379,7 @@
 }
 
 .chelated-main{
-    margin-top: 93px;
+    margin-top: 65px;
     padding-bottom: 93px;
 }
 .chelated-title{
@@ -449,14 +455,10 @@
     .your-results-cnt {
         padding: 70px 70px 70px 91px;
     }
-    .product-big-photo {
-        height: 685px;
-    }
+
 }
 @media (max-width: 1399px){
-    .product-big-photo {
-        height: 640px;
-    }
+
     .product-page-rel {
         max-width: 640px;
     }
@@ -487,9 +489,7 @@
     .product-page-rel {
         max-width: 600px;
     }
-    .product-big-photo {
-        height: 600px;
-    }
+
     .product-page-block h1 {
         font-size: 40px;
         line-height: 48px;
@@ -538,9 +538,7 @@
     .product-page-rel {
         max-width: 855px;
     }
-    .product-big-photo {
-        height: 700px;
-    }
+
     .product-page-info {
         max-width: 955px;
         gap: 30px;
@@ -576,7 +574,12 @@
     .ingredients-name p {
         margin-top: 4px;
     }
-
+    .product-page-rel {
+        max-width: 100%;
+    }
+    .product-page-info {
+        max-width: 100%;
+    }
 
 
 }
@@ -610,9 +613,7 @@
     }
 }
 @media (max-width: 767px){
-    .product-big-photo {
-        height: 540px;
-    }
+
     .product-page-block h1 {
         font-size: 34px;
         line-height: 42px;
@@ -638,9 +639,6 @@
 
 }
 @media (max-width: 575px){
-    .product-big-photo {
-        height: 350px;
-    }
 
 
     .product-big-slider .product-button-prev {
@@ -677,6 +675,7 @@
         margin-top: 30px;
         gap: 21px;
         flex-direction: column;
+        align-items: center;
     }
     .items-sold-line {
         width: 100%;
@@ -717,6 +716,11 @@
     .chelated-text {
         padding: 15px 0;
     }
-
+    .product-sm-photo {
+        border-radius: 10px;
+    }
+    .product-sm-photo img {
+        border-radius: 10px;
+    }
 
 }

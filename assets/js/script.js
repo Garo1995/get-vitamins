@@ -238,6 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const accordion = new Accordion(document.querySelector(".accordion"), false);
+    const accordionTow = new Accordion(document.querySelector(".accordion-two"), false);
 });
 
 

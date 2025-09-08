@@ -244,7 +244,6 @@ p{
 .bestsellers-photo img{
     border-radius: 8px;
     width: 100%;
-    height: 335px;
     object-fit: cover;
     transition: 0.3s;
 }
@@ -708,6 +707,9 @@ p{
     margin-top: 30px;
     gap: 8px;
 }
+.accordion-two{
+    gap: 8px;
+}
 .accordion-colum{
     gap: 8px;
     width: 50%;
@@ -748,8 +750,8 @@ p{
     justify-content: center;
     align-items: center;
 }
-.open .accordion-plus{
-    transform: rotate(45deg);
+.open .accordion-plus:before{
+    opacity: 0;
 }
 .accordion-plus:before{
     content: "";
@@ -1219,9 +1221,7 @@ p{
         padding-bottom: 30px;
         background-position: center;
     }
-    .bestsellers-photo img {
-        height: 280px;
-    }
+
     .composition-cnt {
         flex-wrap: wrap;
     }
@@ -1387,6 +1387,9 @@ p{
     .magnesium-reviews ul {
         width: 100%;
         margin-bottom: 4px;
+    }
+    .magazine-photo img {
+        height: auto;
     }
 }
 
