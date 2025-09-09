@@ -200,7 +200,7 @@ let magazineSwiper = new Swiper(".magazine-slider", {
 
 document.addEventListener("DOMContentLoaded", function () {
     class Accordion {
-        constructor(el, multiple = false) {
+        constructor(el, multiple = false, openFirst = false) {
             this.el = el;
             this.multiple = multiple;
 
@@ -208,6 +208,14 @@ document.addEventListener("DOMContentLoaded", function () {
             this.links.forEach(link => {
                 link.addEventListener("click", (e) => this.dropdown(e, link));
             });
+
+            // если нужно открыть первый блок
+            if (openFirst && this.links.length > 0) {
+                const firstLink = this.links[0];
+                const firstSub = firstLink.nextElementSibling;
+                firstSub.style.maxHeight = firstSub.scrollHeight + "px";
+                firstLink.classList.add("open");
+            }
         }
 
         dropdown(e, link) {
@@ -238,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const accordion = new Accordion(document.querySelector(".accordion"), false);
-    const accordionTow = new Accordion(document.querySelector(".accordion-two"), false);
+    const accordionTwo = new Accordion(document.querySelector(".accordion-two"), false, true); // открываем первый блок
 });
 
 
