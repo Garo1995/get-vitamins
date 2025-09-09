@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 let inswiper = new Swiper(".partners-slider", {
-    slidesPerView: 1,
+    slidesPerView: 2,
     loop: true,
     spaceBetween: 50,
     allowTouchMove: false,
@@ -284,13 +284,13 @@ let inswiper = new Swiper(".partners-slider", {
         delay: 1,
         disableOnInteraction: false
     },
-    speed: 14000,
+    speed: 9000,
     grabCursor: true,
     mousewheelControl: true,
     keyboardControl: true,
     breakpoints: {
         '1020': {
-            slidesPerView: 1,
+            slidesPerView: 2,
             slidesPerGroup: 1,
             spaceBetween: 50,
         },
