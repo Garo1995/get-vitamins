@@ -282,6 +282,7 @@ let inswiper = new Swiper(".partners-slider", {
     allowTouchMove: false,
     autoplay: {
         delay: 1,
+
         disableOnInteraction: false
     },
     speed: 9000,
