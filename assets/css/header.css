@@ -1,3 +1,4 @@
+
 header{
     position: fixed;
     left: 0;
@@ -23,23 +24,50 @@ header .container{
 .menu-mobile{
     gap: 20px;
     width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
 }
 
 .nav-menu ul{
     gap: 40px;
 }
+.nav-menu li{
+}
+.nav-menu li:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 110px;
+    height: 30px;
+    margin-bottom: -10px;
+}
+
 .nav-menu li>a, .open-product-menu{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
     text-transform: uppercase;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
     position: relative;
     gap: 12px;
@@ -55,13 +83,15 @@ header .container{
 }
 
 .nav-menu li>a:after, .open-product-menu:after{
-   content: "";
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0;
     height: 1px;
     background: #FFFFFF;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 .nav-menu li>a:hover:after, .open-product-menu:hover:after{
@@ -75,6 +105,7 @@ header .container{
 
 .header-btn{
     gap: 12px;
+    display: none;
 }
 .header-btn span{
     width: 2px;
@@ -84,11 +115,23 @@ header .container{
 }
 
 .buy-wildberries{
+    background: -webkit-gradient(linear, left top, right top, from(#EC3CCA), to(#7D17F8));
+    background: -o-linear-gradient(left, #EC3CCA 0%, #7D17F8 100%);
     background: linear-gradient(90deg, #EC3CCA 0%, #7D17F8 100%);
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 40px;
     opacity: 1;
@@ -100,13 +143,16 @@ header .container{
 .buy-wildberries:hover{
     opacity: 0.7;
 }
+.logo-wb-mob{
+    display: none;
+}
 .buy-wildberries span{
     color: #FFFFFF;
     font-weight: 400;
     font-size: 11px;
     line-height: 28px;
     text-transform: uppercase;
-    margin-top: 6px;
+    margin-top: 2px;
     white-space: none;
 }
 
@@ -118,6 +164,8 @@ header .container{
     text-transform: uppercase;
     color: #FFFFFF;
     background: unset;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     letter-spacing: 3px;
 }
@@ -136,54 +184,64 @@ header .container{
     margin-top: 20px;
     position: absolute;
     padding: 5px 0 40px;
-    -webkit-transform: translateY(-20%);
-    -ms-transform: translateY(-20%);
-    transform: translateY(-20%);
-    opacity: 0;
-    visibility: hidden;
+    display: none;
     -webkit-transition: all .3s cubic-bezier(.4,0,.2,1);
+    -o-transition: all .3s cubic-bezier(.4,0,.2,1);
     transition: all .3s cubic-bezier(.4,0,.2,1);
     z-index: -1;
 }
-.submenu-head.opened-submenu {
-    visibility: visible;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
+
+.nav-menu ul li:hover .submenu-head {
+    display: block;
+
 }
 
 .submenu-head-cnt{
     position: relative;
     gap: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
-    border-top: 1px solid #FFFFFF;
+    align-items: start;
+    border-top: 1px solid #F5F2EC;
     padding-top: 48px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-}
-.close-submenu{
-    display: flex;
-    position: absolute;
-    top: 48px;
-    right: 2px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-.close-submenu i{
-    width: 100%;
-    height: 100%;
+
 }
 
-.submenu-head-flex{
+.submenu-head-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    gap: 12px;
+    gap: 24px 40px;
+    flex-wrap: wrap;
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
 }
 .product-vitamins{
-    max-width: 185px;
+    max-width: 209px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.product-vitamins img{
+    max-width: 70px;
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.product-vitamins span{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #F5F2ED;
 }
 .href-all-product{
     font-weight: 500;
@@ -192,13 +250,20 @@ header .container{
     text-transform: uppercase;
     color: #FFFFFF;
     border-bottom: 1px solid #FFFFFF;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 .href-all-product:hover{
     border-bottom: 1px solid transparent;
 }
-
+.href-all-product i{
+    width: 10px;
+}
 .open-menu{
     display: none;
 }
@@ -217,7 +282,7 @@ header .container{
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    top: 3px;
+    top: 5px;
     position: relative;
 }
 .close-menu span:nth-child(2) {
@@ -225,7 +290,7 @@ header .container{
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     position: relative;
-    top: -3px;
+    top: -5px;
 }
 .close-menu span:nth-child(3){
     display: none;
@@ -243,7 +308,10 @@ header .container{
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 11;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px)
 
 }
@@ -253,9 +321,7 @@ header .container{
     .header-main {
         gap: 50px;
     }
-    .product-vitamins {
-        max-width: 135px;
-    }
+
 }
 
 @media (max-width: 1299px){
@@ -272,10 +338,7 @@ header .container{
 
 
 @media (max-width: 1099px) {
-    .close-submenu {
-        top: 13px;
-        right: 0;
-    }
+
     .submenu-head-cnt {
         border-top: unset;
         padding-top: 20px;
@@ -303,23 +366,42 @@ header .container{
 
 
     .open-menu{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
-        gap: 4px;
+        gap: 8px;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
         height: 30px;
         width: 30px;
         z-index: 111111;
     }
     .open-menu span{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         background: #F5F5F5;
-        width: 22px;
+        width: 100%;
         height: 2px;
         border-radius: 5px;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
+    }
+    .open-menu span:last-child{
+        width: 15px;
+        margin-left: auto;
     }
 
     .menu-content {
@@ -328,14 +410,20 @@ header .container{
         z-index: 99999;
         top: 55px;
         left: 0;
+        -webkit-transition: 0.6s;
+        -o-transition: 0.6s;
         transition: 0.6s;
         height: 95%;
         overflow: hidden;
+        -webkit-transform: translateY(-120%);
+        -ms-transform: translateY(-120%);
         transform: translateY(-120%);
 
     }
 
     .transition-menu {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
         transform: translateY(0);
 
         -webkit-transition: all 0.6s ease 0s;
@@ -343,12 +431,27 @@ header .container{
         transition: all 0.6s ease 0s;
     }
     .menu-mobile{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         position: relative;
         width: 100%;
         padding: 30px 16px;
         background: #000000;
+    }
+
+
+
+
+    .nav-menu ul li:hover .submenu-head {
+       display: none;
+    }
+    .submenu-head.opened-submenu {
+        display: block!important;
     }
 
     .nav-menu ul {
@@ -378,7 +481,12 @@ header .container{
 
     .nav-menu ul {
         width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
         gap: 10px;
     }
@@ -391,6 +499,8 @@ header .container{
         line-height: 18px;
         gap: 12px;
         padding: 15px 0;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
         border-bottom: 1px solid #fff;
     }
@@ -415,28 +525,41 @@ header .container{
         -ms-transform: translateY(0);
         transform: translateY(0);
     }
-    .close-submenu{
-        display: none;
-    }
+
     header .submenu-head-cnt {
         gap: 22px;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         padding: 22px 0 10px;
+        flex-direction: column-reverse;
     }
     .submenu-head .container{
         padding: 0;
     }
     .submenu-head-flex {
-        gap: 12px;
+        gap: 20px 17px;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: flex-start;
+        max-width: 960px;
     }
     .href-all-product {
         border-bottom: unset;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
         width: max-content;
         background: #24C433;
@@ -454,11 +577,9 @@ header .container{
     }
 }
 @media (max-width: 767px){
-    .product-vitamins {
-        max-width: 105px;
-    }
+
     .nav-menu li>a, .open-product-menu {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 18px;
         padding: 10px 0;
     }
@@ -468,13 +589,18 @@ header .container{
     }
 }
 @media (max-width: 670px){
-   header .buy-wildberries span {
-        display: none;
+    .logo-wb-mob{
+        display: block;
     }
-   header .buy-wildberries {
+    header .buy-wildberries {
         padding: 3px 13px;
     }
-
+    .logo-wb-desc{
+        display: none;
+    }
+    header .buy-wildberries img {
+        width: 26px;
+    }
 }
 @media (max-width: 570px){
     .logo {
@@ -486,18 +612,36 @@ header .container{
     .header-btn{
         display: none;
     }
-    header .buy-wildberries img {
-        width: 74px;
-    }
+
     .header-main {
-        gap: 13px;
+        gap: 20px;
     }
     .submenu-head-flex {
         gap: 8px;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        justify-content: center;
+    }
+    .product-vitamins img {
+        max-width: 45px;
+        height: 45px;
+    }
+    .magnesium-reviews img{
+        width: 69px;
+    }
+    .logo {
+        max-width: 146px;
+    }
+    header .buy-wildberries {
+        padding: 3px 20px;
+        height: 35px;
     }
 }
-@media (max-width: 570px){
 
+@media (max-width: 399px){
+    header .buy-wildberries {
+        padding: 3px 13px;
+    }
+    .header-main {
+        gap: 12px;
+    }
 }

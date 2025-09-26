@@ -1,4 +1,5 @@
 
+
 .icon {
     display: inline-block;
     height: 14px;
@@ -11,6 +12,8 @@
     -webkit-mask-position: center;
     font-size: 18px;
     background-color: #333333;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -39,6 +42,12 @@
 .icon.icon-close {
     mask-image: url('../img/icon/close.svg');
     -webkit-mask-image: url('../img/icon/close.svg');
+
+    background-color: #FFFFFF;
+}
+.icon.arrow-top-right {
+    mask-image: url('../img/icon/arrow-top-right.svg');
+    -webkit-mask-image: url('../img/icon/arrow-top-right.svg');
 
     background-color: #FFFFFF;
 }

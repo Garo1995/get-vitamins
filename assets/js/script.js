@@ -30,17 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const openProductMenu = document.querySelector(".open-product-menu");
     const submenuHead = document.querySelector(".submenu-head");
-    const closeSubmenu = document.querySelector(".close-submenu");
 
     if (openProductMenu) {
         openProductMenu.addEventListener("click", function () {
             submenuHead.classList.toggle("opened-submenu");
-        });
-    }
-
-    if (closeSubmenu) {
-        closeSubmenu.addEventListener("click", function () {
-            submenuHead.classList.remove("opened-submenu");
         });
     }
 });
@@ -113,15 +106,14 @@ let bestsellersSwiper = new Swiper(".bestsellers-slider", {
         '1020': {
             slidesPerView: 3,
             spaceBetween: 16,
-
         },
         '570': {
             slidesPerView: 2,
             spaceBetween: 16,
         },
         '320': {
-            slidesPerView: 1,
-            spaceBetween: 16,
+            slidesPerView: 2,
+            spaceBetween: 20,
         },
     },
     navigation: {
@@ -186,7 +178,7 @@ let magazineSwiper = new Swiper(".magazine-slider", {
             spaceBetween: 16,
         },
         '320': {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 16,
         },
     },
@@ -285,7 +277,7 @@ let inswiper = new Swiper(".partners-slider", {
 
         disableOnInteraction: false
     },
-    speed: 9000,
+    speed: 8000,
     grabCursor: true,
     mousewheelControl: true,
     keyboardControl: true,
@@ -298,6 +290,8 @@ let inswiper = new Swiper(".partners-slider", {
         '320': {
             slidesPerView: 1,
             slidesPerGroup: 1,
+            spaceBetween: 40,
+            speed: 6500,
 
         },
     },
@@ -315,7 +309,7 @@ let positiveswiper = new Swiper(".positive-slider", {
         delay: 1,
         disableOnInteraction: false
     },
-    speed: 15500,
+    speed: 12000,
     grabCursor: true,
     mousewheelControl: true,
     keyboardControl: true,

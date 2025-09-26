@@ -1,7 +1,8 @@
+
 h1{
-    font-weight: 400;
+    font-weight: 300;
     font-size: 61px;
-    line-height: 81px;
+    line-height: 70px;
     color: #FFFFFF;
 }
 
@@ -61,21 +62,31 @@ p{
     margin-left: 75px;
 }
 .magnesium-reviews{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 11px;
 }
 .magnesium-reviews ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 6px;
 }
 .magnesium-reviews ul li{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .icon-star{
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     content: url("../img/icon/star.svg");
 }
 .magnesium-reviews small{
@@ -83,7 +94,6 @@ p{
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
-    margin-bottom: -5px;
 }
 .magnesium-info h1{
     margin-top: 16px;
@@ -96,10 +106,20 @@ p{
     margin-top: 24px;
 }
 .btn{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     background: #24C433;
     padding: 12px 30px;
@@ -118,8 +138,14 @@ p{
 
 .magnesium-slider .swiper-pagination {
     bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     left: 0;
     position: relative;
@@ -150,6 +176,8 @@ p{
 
 
 .swiper-container-free-mode > .swiper-wrapper{
+    -webkit-transition-timing-function : linear;
+    -o-transition-timing-function : linear;
     transition-timing-function : linear;
 }
 
@@ -157,7 +185,7 @@ p{
 
 .partners-logos {
     overflow: hidden;
-    padding: 23px 0;
+    padding: 20px 0;
     background: #000000;
 }
 .partners-logos:before{
@@ -165,13 +193,17 @@ p{
     width: 100%;
 }
 .partners-logo{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .partners-slider{
     pointer-events: none;
-    width: 2502px;
+    width: 2612px;
 
 }
 .positive-slider{
@@ -183,8 +215,9 @@ p{
 
 
 .partners-slider img{
-    height: 35px;
+    height: 40px;
     width: 100%;
+    -o-object-fit: contain;
     object-fit: contain;
 }
 
@@ -221,10 +254,16 @@ p{
     width: 45px;
     height: 45px;
     position: relative;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
-
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: unset;
+}
 .bestsellers-cnt{
     margin-top: 30px;
 }
@@ -233,19 +272,26 @@ p{
 }
 
 .bestsellers-box{
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     cursor: pointer;
 }
 .bestsellers-photo{
     width: 100%;
     position: relative;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 
 }
 .bestsellers-photo img{
     border-radius: 8px;
     width: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 .bestsellers-photo>img{
@@ -258,6 +304,8 @@ p{
     width: 100%;
     height: 100%;
     z-index: 1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 .bestsellers-box:hover .bestsellers-photo-hover{
@@ -317,11 +365,21 @@ p{
 }
 
 .btn-line{
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     white-space: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     border: 1px solid #24C433;
     padding: 8px 20px 6px;
@@ -357,6 +415,8 @@ p{
 .positive-reviews-name  {
     white-space: nowrap;
     gap: 8px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 .positive-reviews-name  p{
@@ -366,11 +426,12 @@ p{
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
-    font-family: 'Unbounded';
 
 }
 .reviews-count{
     background: #24C433;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     white-space: nowrap;
     padding: 4px 10px;
@@ -380,8 +441,14 @@ p{
     line-height: 14px;
     color: #F5F2ED;
     height: 27px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -412,15 +479,20 @@ p{
 }
 
 .from-others-name{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 11px;
     margin-bottom: 5px;
 }
 .from-others-name i{
     background-color: #24C433;
-    height: 17px;
-    width: 17px;
+    height: 18px;
+    max-width: 18px;
+    width: 100%;
 }
 .from-others-name h4{
     color: #000000;
@@ -431,30 +503,31 @@ p{
     margin-top: 3px;
 }
 
-.composition-main{
-    background: #24C433;
-
-}
 
 .composition-flex{
     padding: 60px 75px;
     gap: 20px;
 }
 .composition-name{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 .composition-name strong{
     font-weight: 400;
     font-size: 52px;
     line-height: 61px;
-    color: #F5F2ED;
+    color: #000000;
 }
 .composition-name span{
     font-weight: 400;
     font-size: 32px;
     line-height: 32px;
-    color: #F5F2ED;
+    color: #000000;
 }
 
 .composition-cnt{
@@ -560,6 +633,7 @@ p{
     width: 100%;
     border-radius: 8px 8px 0 0;
     height: 298px;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 .nutrition-text{
@@ -629,27 +703,34 @@ p{
     display: block;
 }
 .customers-cnt{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 20px;
 }
 .customers-number{
     gap: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .customers-number strong{
-    color: #24C433;
+    color: #24C434;
     font-weight: 400;
     font-size: 35px;
     line-height: 28px;
 }
 .customers-number p{
-    font-weight: 500;
     font-size: 14px;
     line-height: 19px;
     color: #000000;
-    font-family: 'Unbounded';
 
 }
 
@@ -726,14 +807,22 @@ p{
 
 
 .accordion-click{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 20px 18px 20px 20px;
     cursor: pointer;
     gap: 14px;
 }
 .accordion-click h3{
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     font-weight: 400;
     font-size: 14px;
@@ -745,10 +834,18 @@ p{
     max-width: 16px;
     width: 100%;
     height: 16px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .open .accordion-plus:before{
@@ -774,6 +871,8 @@ p{
 .submenu {
     max-height: 0;
     overflow: hidden;
+    -webkit-transition: max-height 0.3s ease;
+    -o-transition: max-height 0.3s ease;
     transition: max-height 0.3s ease;
 
 }
@@ -790,9 +889,17 @@ p{
     padding: 12px 22px;
     gap: 8px;
     border-radius: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     color: #24C433;
     font-weight: 400;
@@ -847,12 +954,16 @@ p{
     display: none;
 }
 .magazine-box{
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     width: 100%;
 
 }
 .magazine-photo{
     width: 100%;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     overflow: hidden;
     border-radius: 8px;
@@ -862,10 +973,15 @@ p{
     width: 100%;
     border-radius: 8px;
     height: 280px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 .magazine-box:hover .magazine-photo img{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
 .magazine-text{
@@ -902,7 +1018,10 @@ p{
 }
 .page-bestsellers-wrap{
     margin-top: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -1013,10 +1132,7 @@ p{
     .composition-cnt {
         gap: 22px;
     }
-    .composition-name span {
-        font-size: 24px;
-        line-height: 30px;
-    }
+
     .composition-logo {
         width: 88px;
     }
@@ -1039,7 +1155,7 @@ p{
         padding-bottom: 35px;
     }
     .from-others-name h4 {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 20px;
     }
     .from-others-text {
@@ -1105,13 +1221,16 @@ p{
     }
     .accordion {
         margin-top: 24px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .accordion-colum {
         width: 100%;
     }
     h2 {
-        font-size: 28px;
+        font-size: 32px;
         line-height: 34px;
     }
     .reviews-grid-item {
@@ -1121,10 +1240,18 @@ p{
         font-size: 26px;
     }
     .customers-title{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
     }
     .customers-cnt {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
         gap: 30px;
         margin-top: 21px;
@@ -1137,6 +1264,7 @@ p{
         margin-top: 20px;
     }
     .supplement-flex {
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
     .supplement-box {
@@ -1148,7 +1276,7 @@ p{
         line-height: 24px;
     }
     .producing-flex {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .producing-info {
@@ -1157,7 +1285,12 @@ p{
     }
     .composition-flex {
         padding: 26px 9px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
         gap: 30px;
     }
@@ -1169,10 +1302,15 @@ p{
         width: 95px;
     }
     .from-others-cnt{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .composition-name {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         gap: 20px;
     }
@@ -1224,6 +1362,7 @@ p{
     }
 
     .composition-cnt {
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
     .composition-logo {
@@ -1233,7 +1372,11 @@ p{
         display: none;
     }
     .bestsellers-cnt .bestsellers-arrow{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin-top: 30px;
     }
@@ -1245,7 +1388,11 @@ p{
     }
 
     .nutrition-cnt .bestsellers-arrow{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin-top: 30px;
     }
@@ -1256,7 +1403,11 @@ p{
         display: none;
     }
     .magazine-cnt .bestsellers-arrow{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -1265,26 +1416,26 @@ p{
 @media (max-width: 570px){
     .magnesium-reviews {
         gap: 5px 9px;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 
-    h2 {
-        font-size: 24px;
-        line-height: 32px;
-    }
+
     .from-others-info {
         padding: 50px 16px 50px;
         max-width: 100%;
     }
 
-    .from-others-name h4 {
-        font-size: 14px;
-    }
     .composition-name {
         gap: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
     .composition-flex {
         padding: 26px 0;
@@ -1293,13 +1444,32 @@ p{
         padding: 60px 15px 60px 15px;
     }
     .supplement-box {
-        max-width: 100%;
+        max-width: 47%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .supplement-box span {
+        line-height: 19px;
+        text-align: center;
     }
     .nutrition-main {
         padding: 50px 0;
     }
+    .supplement-flex {
+        padding: 30px 0 20px;
+    }
+    .nutrition-cnt {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 30px;
+    }
     .nutrition-slider {
         width: 660px;
+    }
+    .nutrition-cnt .bestsellers-arrow {
+        margin-top: 20px;
     }
     .nutrition-box img {
         height: 244px;
@@ -1314,6 +1484,9 @@ p{
     .customers-cnt {
         gap: 16px;
         margin-top: 20px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .customers-main {
@@ -1343,15 +1516,35 @@ p{
     }
     .bestsellers-cnt {
         margin-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        overflow: hidden;
+        margin-right: -15px;
+        gap: 13px;
     }
-
+    .bestsellers-slider {
+        width: 687px;
+    }
+    .bestsellers-cnt .bestsellers-arrow {
+        margin-top: 0;
+        padding-right: 15px;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        width: 35px;
+        height: 35px;
+    }
     .composition-cnt {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
     .producing-info p {
-        margin: 12px 0 16px;
+        margin: 22px 0;
     }
-
+    .partners-slider img {
+        height: 35px;
+    }
     .supplement-flex {
         gap: 20px;
     }
@@ -1365,12 +1558,9 @@ p{
     .accordion-click {
         padding: 15px 16px 15px 15px;
     }
-    h2 {
-        font-size: 22px;
-        line-height: 32px;
-    }
-    .producing-info p {
-        margin: 7px 0 16px;
+
+    .btn {
+        padding: 16px 22px;
     }
     .supplement-box img {
         width: 60px;
@@ -1385,14 +1575,51 @@ p{
     .page-bestsellers-wrap .bestsellers-box {
         width: 100%;
     }
-    .magnesium-reviews ul {
-        width: 100%;
-        margin-bottom: 4px;
+    .producing-info .btn {
+        max-width: 189px;
+        margin: 0 auto;
     }
     .magazine-photo img {
         height: auto;
     }
+    .magnesium-reviews small {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .icon-star {
+        width: 16px;
+        height: 16px;
+    }
+    .magnesium-reviews {
+        gap: 6px;
+    }
+    .composition-flex {
+        align-items: center;
+    }
+    .magnesium-box {
+        background-position: right;
+    }
+    .partners-slider {
+        width: 1192px;
+    }
+    .partners-logos {
+        padding: 15px 0;
+    }
+    .from-others-name h4 {
+        font-size: 20px;
+    }
+    .magazine-cnt .bestsellers-arrow{
+        display: none;
+    }
+    .magazine-cnt {
+        margin-right: -15px;
+    }
+    .magazine-slider {
+        overflow: unset;
+        width: 655px;
+    }
 }
+
 
 @media (max-width: 370px){
     .nutrition-slider {

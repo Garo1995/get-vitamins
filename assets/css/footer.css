@@ -1,3 +1,4 @@
+
 footer{
     background: #000000;
     padding: 40px 0 14px;
@@ -19,7 +20,7 @@ footer{
     width: 100%;
 }
 .footer-main h4{
-    color: #5ECF72;
+    color: #24C434;
     font-weight: 400;
     font-size: 14px;
     line-height: 28px;
@@ -30,7 +31,12 @@ footer{
     gap: 30px;
 }
 .product-menu-foot ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 12px;
     margin-bottom: 12px;
@@ -41,6 +47,8 @@ footer{
     font-size: 14px;
     line-height: 22px;
     font-family: 'Onest';
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     position: relative;
 }
@@ -52,13 +60,20 @@ footer{
     width: 0;
     height: 1px;
     background: #FFFFFF;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 .product-menu-foot a:hover:after, .footer-menu a:hover:after{
     width: 100%;
 }
 .footer-menu ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 12px;
     margin-top: 12px;
@@ -79,6 +94,8 @@ footer{
     line-height: 22px;
     font-family: 'Onest';
     color: #FFFFFF;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 .email{
@@ -106,6 +123,22 @@ footer{
     max-width: 170px;
     width: 100%;
 }
+.subscribe input::-webkit-input-placeholder{
+    font-family: 'Onest';
+    color: #FFFFFF;
+}
+.subscribe input::-moz-placeholder{
+    font-family: 'Onest';
+    color: #FFFFFF;
+}
+.subscribe input:-ms-input-placeholder{
+    font-family: 'Onest';
+    color: #FFFFFF;
+}
+.subscribe input::-ms-input-placeholder{
+    font-family: 'Onest';
+    color: #FFFFFF;
+}
 .subscribe input::placeholder{
     font-family: 'Onest';
     color: #FFFFFF;
@@ -115,7 +148,8 @@ footer{
     font-size: 14px;
     line-height: 28px;
     text-transform: uppercase;
-    color: #24C433;
+    color: #24C434;
+
 }
 
 footer .buy-wildberries{
@@ -147,8 +181,14 @@ footer .buy-wildberries{
     width: 16px;
     border-radius: 50%;
     border: 1px solid #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 .checkbox input:checked ~ .radiobtn {
@@ -176,6 +216,8 @@ footer .buy-wildberries{
 .checkbox small a{
     color: #FFFFFF4D;
     text-decoration: underline;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 .checkbox small a:hover{
@@ -206,7 +248,11 @@ footer .buy-wildberries{
     font-size: 14px;
     line-height: 22px;
     text-decoration: underline;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
+    font-family: 'Onest';
+
     color: #FFFFFF4D;
 }
 .policy-href a:hover{
@@ -252,6 +298,7 @@ footer .buy-wildberries{
 @media (max-width: 1020px){
     .footer-main {
         gap: 40px 30px;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
     .agree-privacy {
@@ -278,17 +325,18 @@ footer .buy-wildberries{
         max-width: 100%;
     }
     .footer-main {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
         gap: 35px 60px;
     }
     .policy-href {
         gap: 9px;
-        flex-direction: column;
     }
     .policy-info {
         margin-top: 30px;
+        align-items: flex-start;
     }
-
 
 }
 @media (max-width: 570px){
@@ -301,5 +349,8 @@ footer .buy-wildberries{
     }
     .checkbox small {
         font-size: 10px;
+    }
+    .policy-info p {
+        text-align: left;
     }
 }
