@@ -68,7 +68,7 @@ p{
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 11px;
+    gap: 7px;
 }
 .magnesium-reviews ul{
     display: -webkit-box;
@@ -203,7 +203,7 @@ p{
 
 .partners-slider{
     pointer-events: none;
-    width: 2612px;
+    width: 2712px;
 
 }
 .positive-slider{
@@ -460,15 +460,13 @@ p{
     width: 100%;
 }
 .from-others-photo{
-    max-width: 920px;
-    width: 100%;
+    width: 50%;
 }
 .from-others-photo img{
     width: 100%;
 }
 .from-others-info{
-    max-width: 920px;
-    width: 100%;
+    width: 50%;
     padding: 90px 60px 40px;
 }
 .from-others-info h2{
@@ -546,8 +544,7 @@ p{
     background: #FFFFFF;
 }
 .producing-info{
-    max-width: 920px;
-    width: 100%;
+    width: 50%;
     padding: 190px 130px 140px 150px;
 }
 .producing-info h2{
@@ -565,8 +562,7 @@ p{
     width: 100%;
 }
 .producing-photo{
-    max-width: 920px;
-    width: 100%;
+    width: 50%;
 
 }
 .producing-photo img{
@@ -1038,12 +1034,9 @@ p{
     }
 
     .producing-info {
-        max-width: 720px;
         padding: 190px 120px 140px 90px;
     }
-    .from-others-info {
-        max-width: 720px;
-    }
+
 }
 @media (max-width: 1399px){
     .magnesium-info {
@@ -1061,7 +1054,6 @@ p{
         line-height: 26px;
     }
     .from-others-info {
-        max-width: 650px;
         padding: 55px 40px 40px;
     }
     .from-others-text {
@@ -1072,7 +1064,6 @@ p{
         padding: 40px 9px;
     }
     .producing-info {
-        max-width: 654px;
         padding: 160px 80px 93px 50px;
     }
     .magazine-title p {
@@ -1281,7 +1272,7 @@ p{
 
     .producing-info {
         padding: 80px 35px 80px 30px;
-        max-width: 100%;
+        width: 100%;
     }
     .composition-flex {
         padding: 26px 9px;
@@ -1316,7 +1307,7 @@ p{
     }
     .from-others-info {
         padding: 60px 28px 60px;
-        max-width: 100%;
+        width: 100%;
     }
     h1 {
         font-size: 40px;
@@ -1333,10 +1324,10 @@ p{
         padding: 0 15px;
     }
     .producing-photo {
-        max-width: 100%;
+        width: 100%;
     }
     .from-others-photo {
-        max-width: 100%;
+        width: 100%;
     }
     .bestsellers-main {
         overflow: hidden;
