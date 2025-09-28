@@ -1577,6 +1577,10 @@ p{
     .magnesium-reviews small {
         font-size: 12px;
         line-height: 15px;
+        margin-top: 0;
+    }
+    .magnesium-reviews img {
+        margin-top: 1px;
     }
     .icon-star {
         width: 16px;
