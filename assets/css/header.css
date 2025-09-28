@@ -469,7 +469,9 @@ header .container{
     .nav-menu ul{
         width: 100%;
     }
-
+    .nav-menu li>a:after, .open-product-menu:after{
+        display: none;
+    }
 
 
 
