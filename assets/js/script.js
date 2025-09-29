@@ -198,48 +198,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
             this.links = this.el.querySelectorAll(".link");
             this.links.forEach(link => {
-                link.addEventListener("click", (e) => this.dropdown(e, link));
+                link.addEventListener("click", () => this.dropdown(link));
             });
 
-            // если нужно открыть первый блок
+            // открыть первый блок, если нужно
             if (openFirst && this.links.length > 0) {
-                const firstLink = this.links[0];
-                const firstSub = firstLink.nextElementSibling;
-                firstSub.style.maxHeight = firstSub.scrollHeight + "px";
-                firstLink.classList.add("open");
+                this.open(this.links[0]);
             }
         }
 
-        dropdown(e, link) {
-            const next = link.nextElementSibling;
+        open(link) {
+            const submenu = link.nextElementSibling;
 
-            // slideToggle
-            if (next.style.maxHeight) {
-                next.style.maxHeight = null;
+            submenu.style.maxHeight = submenu.scrollHeight + "px";
+            submenu.classList.add("open");
+
+            submenu.addEventListener("transitionend", function handler() {
+                submenu.style.maxHeight = "";
+                submenu.removeEventListener("transitionend", handler);
+            });
+
+            link.classList.add("open");
+        }
+
+        close(link) {
+            const submenu = link.nextElementSibling;
+
+            submenu.style.maxHeight = submenu.scrollHeight + "px";
+            submenu.offsetHeight; // форсируем перерисовку
+            submenu.style.maxHeight = "0";
+
+            submenu.addEventListener("transitionend", function handler() {
+                submenu.classList.remove("open");
+                submenu.style.maxHeight = "";
+                submenu.removeEventListener("transitionend", handler);
+            });
+
+            link.classList.remove("open");
+        }
+
+        dropdown(link) {
+            const submenu = link.nextElementSibling;
+
+            if (submenu.classList.contains("open")) {
+                this.close(link);
             } else {
-                next.style.maxHeight = next.scrollHeight + "px";
-            }
-
-            if (!this.multiple) {
-                this.el.querySelectorAll(".submenu").forEach(submenu => {
-                    if (submenu !== next) {
-                        submenu.style.maxHeight = null;
-                    }
-                });
-            }
-
-            if (!link.classList.contains("open")) {
-                this.el.querySelectorAll(".link").forEach(l => l.classList.remove("open"));
-                link.classList.add("open");
-            } else {
-                link.classList.remove("open");
+                if (!this.multiple) {
+                    this.el.querySelectorAll(".link.open").forEach(l => this.close(l));
+                }
+                this.open(link);
             }
         }
     }
 
+    // первый аккордеон (все закрыты)
     const accordion = new Accordion(document.querySelector(".accordion"), false);
-    const accordionTwo = new Accordion(document.querySelector(".accordion-two"), false, true); // открываем первый блок
+
+    // второй аккордеон (первый блок открыт)
+    const accordionTwo = new Accordion(document.querySelector(".accordion-two"), false, true);
 });
+
 
 
 

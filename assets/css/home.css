@@ -865,17 +865,18 @@ p{
     border-radius: 5px;
 }
 
-.submenu {
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: max-height 0.3s ease;
-    -o-transition: max-height 0.3s ease;
-    transition: max-height 0.3s ease;
-
-}
 .submenu-drop{
     padding: 0 20px 20px;
 
+}
+ .submenu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+ .submenu.open {
+    max-height: none;
 }
 
 .see-more{
