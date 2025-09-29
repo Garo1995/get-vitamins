@@ -295,7 +295,7 @@ let inswiper = new Swiper(".partners-slider", {
 
         disableOnInteraction: false
     },
-    speed: 10000,
+    speed: 13500,
     grabCursor: true,
     mousewheelControl: true,
     keyboardControl: true,
@@ -327,7 +327,7 @@ let positiveswiper = new Swiper(".positive-slider", {
         delay: 1,
         disableOnInteraction: false
     },
-    speed: 12000,
+    speed: 14500,
     grabCursor: true,
     mousewheelControl: true,
     keyboardControl: true,
